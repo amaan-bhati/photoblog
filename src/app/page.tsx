@@ -16,10 +16,10 @@ export default function Home() {
             animationDuration={0.5}
             pauseBetweenAnimations={1}
           />
-          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
+          {/* <p className="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
             Capturing moments, stories, and everything in between through my lens.
             From friends and places to the quiet blues of a candid moment—every frame tells a story.
-          </p>
+          </p> */}
         </div>
       </header>
 
