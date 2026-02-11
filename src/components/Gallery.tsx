@@ -35,32 +35,32 @@ type ItemDef = {
 
 const DEFAULT_IMAGES: ImageItem[] = [
     {
-        src: 'https://images.unsplash.com/photo-1755331039789-7e5680e26e8f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Abstract art'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844617/IMG_20250303_170655_1_gyx4zq.jpg',
+        alt: 'Photo 1'
     },
     {
-        src: 'https://images.unsplash.com/photo-1755569309049-98410b94f66d?q=80&w=772&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Modern sculpture'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844617/IMG_20250303_170109_mrb9kg.jpg',
+        alt: 'Photo 2'
     },
     {
-        src: 'https://images.unsplash.com/photo-1755497595318-7e5e3523854f?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Digital artwork'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844616/Snapchat-1058093257_hnrp53.jpg',
+        alt: 'Photo 3'
     },
     {
-        src: 'https://images.unsplash.com/photo-1755353985163-c2a0fe5ac3d8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Contemporary art'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844616/Snapchat-1016370816_urutvy.jpg',
+        alt: 'Photo 4'
     },
     {
-        src: 'https://images.unsplash.com/photo-1745965976680-d00be7dc0377?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Geometric pattern'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844616/Snapchat-1610270378_lapntn.jpg',
+        alt: 'Photo 5'
     },
     {
-        src: 'https://images.unsplash.com/photo-1752588975228-21f44630bb3c?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Textured surface'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844616/Snapchat-471983787_maaj2s.jpg',
+        alt: 'Photo 6'
     },
     {
-        src: 'https://pbs.twimg.com/media/Gyla7NnXMAAXSo_?format=jpg&name=large',
-        alt: 'Social media image'
+        src: 'https://res.cloudinary.com/dqwbkjfuh/image/upload/v1770844616/Snapchat-973089150_uo64yg.jpg',
+        alt: 'Photo 7'
     }
 ];
 
@@ -690,6 +690,7 @@ export default function Gallery({
       --rot-x: calc((360deg / var(--segments-y)) / 2);
       --item-width: calc(var(--circ) / var(--segments-x));
       --item-height: calc(var(--circ) / var(--segments-y));
+      min-height: 400px;
     }
     
     .sphere-root * { box-sizing: border-box; }

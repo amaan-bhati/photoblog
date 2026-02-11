@@ -32,15 +32,15 @@ export default function Home() {
         grayscale */}
       {/* /> */}
 
-      <main className="flex-1 w-full h-[600px] sm:h-[800px] mt-12 relative overflow-visible" style={{ perspective: '1200px' }}>
-        <div className="w-full h-full relative">
+      <main className="flex-1 w-full min-h-[600px] sm:min-h-[800px] mt-12 relative overflow-hidden">
+        <div className="w-full h-full relative flex items-center justify-center">
           <Gallery
-            fit={0.8}
-            minRadius={1000}
+            fit={0.9}
+            minRadius={800}
+            maxRadius={1200}
             maxVerticalRotationDeg={20}
-            segments={34}
+            segments={28}
             dragDampening={1.2}
-            grayscale
           />
         </div>
       </main>
