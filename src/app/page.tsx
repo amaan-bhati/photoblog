@@ -1,29 +1,54 @@
 import Image from "next/image";
 
+import Loader from "@/components/Loader";
+import Gallery from "@/components/Gallery";
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black font-sans selection:bg-zinc-100 dark:selection:bg-zinc-800">
-      <main className="max-w-4xl mx-auto px-6 py-24 sm:py-32 md:py-40">
-        <div className="flex flex-col items-center text-center space-y-8 md:space-y-12">
-          <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 transition-colors">
-              Amaan's Photoblog
-            </h1>
-            <p className="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
-              Capturing moments, stories, and everything in between through my lens.
-              From friends and places to the quiet blues of a candid moment—every frame tells a story.
-            </p>
-          </div>
+    <div className="min-h-screen bg-white dark:bg-black font-sans selection:bg-zinc-100 dark:selection:bg-zinc-800 flex flex-col">
+      <header className="max-w-4xl mx-auto px-6 pt-24 sm:pt-32 md:pt-40 text-center">
+        <div className="space-y-4">
+          <Loader
+            sentence="Amaan's Photoblog"
+            manualMode={false}
+            blurAmount={5}
+            borderColor="#66ff00"
+            animationDuration={0.5}
+            pauseBetweenAnimations={1}
+          />
+          <p className="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
+            Capturing moments, stories, and everything in between through my lens.
+            From friends and places to the quiet blues of a candid moment—every frame tells a story.
+          </p>
+        </div>
+      </header>
 
-          <div className="w-12 h-px bg-zinc-200 dark:bg-zinc-800" />
+      {/* <Gallery
+        fit={0.8}
+        minRadius={1000}
+        maxVerticalRotationDeg={20}
+        segments={34}
+        dragDampening={1.2}
+        grayscale */}
+      {/* /> */}
 
-          <div className="pt-8">
-            <button className="px-8 py-3 bg-zinc-900 dark:bg-zinc-50 text-zinc-50 dark:text-zinc-900 rounded-full font-medium transition-all hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg dark:hover:shadow-zinc-50/10">
-              View Gallery
-            </button>
-          </div>
+      <main className="flex-1 w-full h-[600px] sm:h-[800px] mt-12 relative overflow-visible" style={{ perspective: '1200px' }}>
+        <div className="w-full h-full relative">
+          <Gallery
+            fit={0.8}
+            minRadius={1000}
+            maxVerticalRotationDeg={20}
+            segments={34}
+            dragDampening={1.2}
+            grayscale
+          />
         </div>
       </main>
+
+      <footer className="py-12 text-center text-zinc-400 text-sm">
+        <div className="w-12 h-px bg-zinc-200 dark:bg-zinc-800 mx-auto mb-8" />
+        <p>© {new Date().getFullYear()} Amaan's Photoblog</p>
+      </footer>
     </div>
   );
 }
